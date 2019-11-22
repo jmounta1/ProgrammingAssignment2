@@ -3,7 +3,7 @@
 ## already been inverted before
 
 ## Creates a list that includes instructions for cacheSolve to call. The
-## instructions set a value for the matrix, get a value of the matrix, set
+## instructions are functions that set a value for the matrix, get a value of the matrix, set
 ## a value of the matrix, and get a value of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -20,9 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Solves for the inverse of the given matrix that was formatted through
-## makeCacheMatrix. If the value has been calculated before, it is cached
-## in the list from makeCacheMatrix and will be recalled instead of
-## recalculated
+## makeCacheMatrix and caches its value. If the value has been calculated
+## before, it is cached in the list from makeCacheMatrix and will be recalled
+## instead of recalculated
 
 cacheSolve <- function(x, ...) {
     x_inv <- x$get_inv()
